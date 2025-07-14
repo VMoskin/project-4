@@ -1,11 +1,12 @@
 import masks
 
+
 def mask_account_card(num_card: str) -> str:
     """функция принимает номер карты или счета и возвращает маску номера"""
     if "Счет" in num_card:
-        return f"{num_card[0:4]} {masks.get_mask_account(num_card[-20:])}"
+        return f"{num_card[0:4]} {masks.get_mask_account(int(num_card[-20:]))}"
     else:
-        return f"{num_card[:-16]}{masks.get_mask_card_number(num_card[-16:])}"
+        return f"{num_card[:-16]}{masks.get_mask_card_number(int(num_card[-16:]))}"
 
 
 def get_date(date_string: str) -> str:
