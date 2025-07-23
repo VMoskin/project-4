@@ -9,6 +9,6 @@ def get_mask_account(account_number_1: int) -> str:
     account_number = str(account_number_1)
     return f"**{account_number[-4:]}"
 
-
-print(get_mask_card_number(1234567898765411))
-print(get_mask_account(24681357984629753155))
+if __name__ == "__main__":
+    print(get_mask_card_number(1234567898765411))
+    print(get_mask_account(24681357984629753155))
