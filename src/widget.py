@@ -13,6 +13,7 @@ def get_date(date_string: str) -> str:
     """Фунция возвращает дату в другом формате"""
     return f"{date_string[8:10]}.{date_string[5:7]}.{date_string[:4]}"
 
+
 if __name__ == "__main__":
     print(mask_account_card("Счет 92345678987654326541"))
     print(mask_account_card("Maestro 7000543267892582"))
